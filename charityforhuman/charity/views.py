@@ -1,4 +1,10 @@
 from django.shortcuts import render
-def contactus (request):
+from charity.forms import CharityForm
+def create (request):
 
-    return render(request,'contact-us.html')
+    if request.method=="POST":
+        pass
+    else:
+        form=CharityForm()
+
+    return render(request,'create.html',{'form':form})

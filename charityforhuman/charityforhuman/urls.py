@@ -19,5 +19,5 @@ from charity import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('contact-us',views.contactus)
+    path('create',views.create)
 ]
