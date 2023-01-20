@@ -7,24 +7,26 @@
 <body>
 <h1>Add new record</h1>
 <form method="post" action ="/create">
+
+    {%csrf_token%}
     <div>
         <label> donar name</label>
-        {{form.doner_name}}
+        {{form.name}}
     </div>
 
     <div>
         <label> donar address</label>
-        {{form.doner_address}}
+        {{form.address}}
     </div>
 
       <div>
         <label> donar email</label>
-        {{form.doner_email}}
+        {{form.email}}
     </div>
 
       <div>
         <label> donar mob  </label>
-        {{form.doner_mob}}
+        {{form.mob}}
     </div>
 
     <br>

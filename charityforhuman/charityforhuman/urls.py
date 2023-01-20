@@ -19,5 +19,7 @@ from charity import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('create',views.create)
+    path('create',views.create),
+    path('all-charity',views.show),
+    path('delete/<int:id>',views.delete)
 ]
