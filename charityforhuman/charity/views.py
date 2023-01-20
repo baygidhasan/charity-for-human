@@ -22,3 +22,18 @@ def delete(request,id):
     charity.delete()
     return redirect("/all-charity")
 
+def edit(request,id):
+    charity=Charity.objects.get(id=id)
+    return render(request, 'edit.html',{"charity":charity})
+
+def update(request,id):
+    charity = Charity.objects.get(id=id)
+    form = CharityForm(request.POST,instance=charity)
+
+    if form.is_valid():
+        charity.save()
+        return redirect("/all-charity")
+    return render(request, 'edit.html', {"charity": charity})
+
+
+

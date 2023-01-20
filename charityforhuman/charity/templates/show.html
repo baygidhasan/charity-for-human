@@ -5,6 +5,10 @@
     <title>All charity information</title>
 </head>
 <body>
+<a href="/create">
+<button>Add new Charity</button>
+    </a>
+<br>
 <table>
     <thead>
     <tr>
@@ -24,6 +28,7 @@
          <td style="border:1px solid red">{{charity.email}}</td>
          <td style="border:1px solid red">{{charity.mob}}</td>
          <td style="border:1px solid red">
+             <a href="/edit/{{charity.id}}">Edit</a>
              <a href="/delete/{{charity.id}}">Delete</a>
 
 

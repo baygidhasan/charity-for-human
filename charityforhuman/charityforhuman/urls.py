@@ -21,5 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('create',views.create),
     path('all-charity',views.show),
-    path('delete/<int:id>',views.delete)
+    path('delete/<int:id>',views.delete),
+    path('edit/<int:id>',views.edit),
+    path('update/<int:id>',views.update)
 ]
