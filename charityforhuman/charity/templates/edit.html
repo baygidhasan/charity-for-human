@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+body {
+  background-image: url('https://images.unsplash.com/photo-1559181567-c3190ca9959b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80');
+}
+</style>
 <head>
     <meta charset="UTF-8">
     <title>Charity Information Update</title>
+    <style type="text/css">
+        label{
+        width:80px;
+        display:inline-block;
+        }
+    </style>
 </head>
 <body>
 
 <form method="post" action ="/update/{{charity.id}}">
 
     {%csrf_token%}
-    <div>
-        <label>name</label>
-        <input type="text" name="name" value="{{charity.name}}">
-    </div>
 
-    <div>
-        <label>address</label>
-         <input type="text" name="address" value="{{charity.address}}">
+
+
+      <div>
+         <label>NAME</label>
+         <input type="text" name="name" value="{{charity.name}}">
     </div>
 
       <div>
-        <label>email</label>
+          <label>ADDRESS</label>
+          <input type="text" name="address" value="{{charity.address}}">
+    </div>
+
+      <div>
+        <label>EMAIL</label>
         <input type="text" name="email" value="{{charity.email}}">
     </div>
 
       <div>
-        <label>mob  </label>
+        <label>MOBILE </label>
         <input type="number" name="mob" value="{{charity.mob}}">
     </div>
        <br>

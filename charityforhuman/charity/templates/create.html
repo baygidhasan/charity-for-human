@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+body {
+  background-image: url('https://images.unsplash.com/photo-1487147264018-f937fba0c817?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80');
+}
+</style>
+
 <head>
     <meta charset="UTF-8">
     <title>create charity information</title>
+    <style type="text/css">
+        label{
+        width:80px;
+        display:inline-block;
+        }
+    </style>
 </head>
 <body>
-<h1>Add new record</h1>
+
+<h1 style="background-color:DodgerBlue;">Add new record</h1>
+
 <form method="post" action ="/create">
+
 
     {%csrf_token%}
     <div>
-        <label>name</label>
+        <label>NAME</label>
         {{form.name}}
     </div>
 
     <div>
-        <label>address</label>
+        <label>ADDRESS</label>
         {{form.address}}
     </div>
 
       <div>
-        <label>email</label>
+        <label>EMAIL</label>
         {{form.email}}
     </div>
 
       <div>
-        <label>mob  </label>
+        <label>MOBILE  </label>
         {{form.mob}}
     </div>
 
@@ -35,6 +50,7 @@
 
 
     </div>
+
 
 
 </body>

@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+body {
+  background-image: url('https://images.unsplash.com/photo-1520013817300-1f4c1cb245ef?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1513&q=80');
+}
+</style>
+
 <head>
     <meta charset="UTF-8">
     <title>All charity information</title>
@@ -12,6 +18,7 @@
 <table>
     <thead>
     <tr>
+
         <th style="border:1px solid red">name</th>
          <th style="border:1px solid red">address</th>
          <th style="border:1px solid red">email</th>
@@ -23,6 +30,7 @@
     <tbody>
     {%for charity in charitys%}
     <tr>
+
         <td style="border:1px solid red">{{charity.name}}</td>
          <td style="border:1px solid red">{{charity.address}}</td>
          <td style="border:1px solid red">{{charity.email}}</td>
@@ -42,6 +50,5 @@
     </tbody>
 
 </table>
-
 </body>
 </html>
